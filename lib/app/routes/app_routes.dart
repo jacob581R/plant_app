@@ -5,9 +5,14 @@ abstract class Routes {
   Routes._();
 
   static const ONBOARDING = _Paths.ONBOARDING;
+  static const ROOT_PAGE = _Paths.ROOT_PAGE;
+  static const SCAN = _Paths.SCAN;
 }
 
 abstract class _Paths {
   _Paths._();
   static const ONBOARDING = '/onboarding';
+  static const ROOT_PAGE = '/root-page';
+
+  static const SCAN = '/scan';
 }

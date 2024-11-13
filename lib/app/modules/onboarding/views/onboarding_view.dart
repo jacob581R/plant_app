@@ -20,7 +20,7 @@ class OnboardingView extends GetView<OnboardingController> {
             Padding(
               padding: EdgeInsets.only(right: 20, top: 20),
               child: InkWell(
-                onTap: () => null, // to login screen
+                onTap: () {}, // to login screen
                 child: const Text(
                   'Skip',
                   style: TextStyle(
@@ -47,25 +47,18 @@ class OnboardingView extends GetView<OnboardingController> {
                     descreption: Constants.descriptionOne,
                   ),
                   OnbardingSlide(
-                    image: 'assets/images/plant-one.png',
+                    image: 'assets/images/plant-two.png',
                     title: Constants.titleTwo,
                     descreption: Constants.descriptionTwo,
                   ),
                   OnbardingSlide(
-                    image: 'assets/images/plant-one.png',
+                    image: 'assets/images/plant-three.png',
                     title: Constants.titleThree,
                     descreption: Constants.descriptionThree,
                   )
                 ],
               ),
             ),
-
-            // Positioned(
-            //     bottom: 80,
-            //     left: 50,
-            //     child: Row(
-            //       children: [],
-            //     )),
             Positioned(
               bottom: 60,
               right: 30,
