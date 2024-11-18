@@ -60,15 +60,20 @@ class RootPageController extends GetxController {
   void scanAction() {
     Get.toNamed('/scan');
   }
+void ontapcarditem(index){
 
+    Get.toNamed('/productdetail',
+        arguments:
+        {
+          'plantid':plantList[index].plantId,
+        } );
+
+}
   void ontapnavigationbar(int index) {
     bottomNavIndex = index;
     update();
   }
-  //Toggle Favorite button
-  void otherfavouritecallback(void Function(int)? callback){
-    callback?.call;
-  }
+
 void favouritecallback (int index){
   plantList[index].isFavorated = !plantList[index].isFavorated;
   update();

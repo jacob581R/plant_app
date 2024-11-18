@@ -7,6 +7,7 @@ abstract class Routes {
   static const ONBOARDING = _Paths.ONBOARDING;
   static const ROOT_PAGE = _Paths.ROOT_PAGE;
   static const SCAN = _Paths.SCAN;
+  static const PRODUCTDETAIL = _Paths.PRODUCTDETAIL;
 }
 
 abstract class _Paths {
@@ -15,4 +16,5 @@ abstract class _Paths {
   static const ROOT_PAGE = '/root-page';
 
   static const SCAN = '/scan';
+  static const PRODUCTDETAIL = '/productdetail';
 }

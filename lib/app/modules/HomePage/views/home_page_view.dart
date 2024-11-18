@@ -94,7 +94,8 @@ class HomePageView extends GetView<RootPageController> {
                 scrollDirection: Axis.horizontal,
                 itemBuilder: (BuildContext context, int index) {
                   return GestureDetector(
-                    onTap: null,
+
+                    onTap:()=>controller.ontapcarditem(index),
                     child: Container(
                       width: 200,
                       margin: EdgeInsets.symmetric(horizontal: 10.0),
@@ -122,7 +123,7 @@ class HomePageView extends GetView<RootPageController> {
                                         color: Constants.primaryColor,
                                       ),
                                       iconSize: 30,
-                                      onPressed:()=>controller.favouritecallback,
+                                      onPressed:()=>controller.favouritecallback(index),
                                     ),
                                 )
 
