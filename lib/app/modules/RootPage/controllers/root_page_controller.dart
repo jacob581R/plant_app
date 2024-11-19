@@ -76,6 +76,7 @@ void ontapcarditem(index){
 
 void favouritecallback (int index){
   plantList[index].isFavorated = !plantList[index].isFavorated;
+  favorites.add(plantList[index]);
   update();
 }
 
