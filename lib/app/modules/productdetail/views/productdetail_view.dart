@@ -11,7 +11,6 @@ class ProductdetailView extends GetView<ProductdetailController> {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
-
     return Scaffold(
        body: Stack(
          children: [
@@ -37,23 +36,29 @@ class ProductdetailView extends GetView<ProductdetailController> {
                        ),
                      ),
                    ),
+                   GetBuilder(builder: (ProductdetailController controller)=>
                    GestureDetector(
-                     onTap:null,
-                     child: Container(
-                       height: 40,
-                       width: 40,
-                       decoration: BoxDecoration(
-                         borderRadius: BorderRadius.circular(25),
-                         color: Constants.primaryColor.withOpacity(.15),
-                       ),
-                       child: Icon(
-                         controller.plantList[controller.args['plantid']].isFavorated==true? Icons.favorite:
-                         Icons.favorite_border
-                         ,
-                         color: Constants.primaryColor,
-                       ),
-                     ),
+                       onTap:controller.addtofavouritelist,
+                       child:
+                       Container(
+                         height: 40,
+                         width: 40,
+                         decoration: BoxDecoration(
+                           borderRadius: BorderRadius.circular(25),
+                           color: Constants.primaryColor.withOpacity(.15),
+                         ),
+                         child: Icon(
+                           controller.plantList[controller.args['plantid']].isFavorated==true? Icons.favorite:
+                           Icons.favorite_border
+                           ,
+                           color: Constants.primaryColor,
+                         ),
+                       )
+
                    ),
+
+                   ),
+
                  ],
                ),
            ),
@@ -199,23 +204,28 @@ class ProductdetailView extends GetView<ProductdetailController> {
         height: 50,
         child:Row(
           children: [
-            Container(
-              height: 50,
-              width: 50,
-              decoration: BoxDecoration(
-                  color: controller.plantList[1].isSelected == true ? Constants.primaryColor.withOpacity(.5) : Colors.white,
-                  borderRadius: BorderRadius.circular(50),
-                  boxShadow: [
-                    BoxShadow(
-                      offset: const Offset(0, 1),
-                      blurRadius: 5,
-                      color: Constants.primaryColor.withOpacity(.3),
-                    ),
-                  ]),
-              child:IconButton(onPressed:null, icon: Icon(
-                Icons.shopping_cart,
-                color: controller.plantList[1].isSelected == true ? Colors.white : Constants.primaryColor,
-              )),
+            GetBuilder(builder: (ProductdetailController controller)=>
+                Container(
+                  height: 50,
+                  width: 50,
+                  decoration: BoxDecoration(
+                      color: controller.plantList[controller.args['plantid']].isSelected == true ? Constants.primaryColor.withOpacity(.5) : Colors.white.withOpacity(0.3),
+                      borderRadius: BorderRadius.circular(50),
+                      boxShadow: [
+                        BoxShadow(
+                          offset: const Offset(0, 1),
+                          blurRadius: 5,
+                          color: Constants.primaryColor.withOpacity(.3),
+                        ),
+                      ]),
+                  child:
+                  IconButton(
+                      onPressed:controller.addtocart,
+                      icon: Icon(
+                        Icons.shopping_cart,
+                        color: controller.plantList[1].isSelected == true ? Colors.white : Constants.primaryColor,
+                      )),
+                ),
             ),
             const SizedBox(
               width: 20,

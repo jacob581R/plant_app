@@ -6,10 +6,17 @@ import '../../HomePage/views/home_page_view.dart';
 import '../../CartPage/views/cart_page_view.dart';
 import '../../FavouritePage/views/favourite_page_view.dart';
 import '../../ProfilePage/views/profile_page_view.dart';
+import '../../../../constants/shareddata.dart';
 
 class RootPageController extends GetxController {
-  List<Plant> favorites = [];
-  List<Plant> myCart = [];
+
+ SharedData sharedData =SharedData();
+  List<Plant> favorites =  SharedData().getfavourites();
+  List<Plant> myCart = SharedData().getmyCart();
+ @override
+  void oninit(){
+   print(myCart);
+ }
 
   int bottomNavIndex = 0;
   List<Plant> plantList = Plant.plantList;
@@ -76,7 +83,14 @@ void ontapcarditem(index){
 
 void favouritecallback (int index){
   plantList[index].isFavorated = !plantList[index].isFavorated;
-  favorites.add(plantList[index]);
+  if(plantList[index].isFavorated==true){
+    favorites.add(plantList[index]);
+    sharedData.updatefavourites(favorites);
+  }
+  if(plantList[index].isFavorated==false){
+    favorites.remove(plantList[index]);
+    sharedData.updatefavourites(favorites);
+  }
   update();
 }
 
