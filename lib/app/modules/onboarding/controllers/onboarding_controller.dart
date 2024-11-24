@@ -16,7 +16,7 @@ class OnboardingController extends GetxController {
     }
 
     if (currentIndex > 2) {
-      Get.toNamed('/root-page');
+      Get.toNamed('/login');
     }
   }
 
