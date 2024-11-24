@@ -13,10 +13,7 @@ class RootPageController extends GetxController {
  SharedData sharedData =SharedData();
   List<Plant> favorites =  SharedData().getfavourites();
   List<Plant> myCart = SharedData().getmyCart();
- @override
-  void oninit(){
-   print(myCart);
- }
+
 
   int bottomNavIndex = 0;
   List<Plant> plantList = Plant.plantList;
