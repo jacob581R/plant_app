@@ -15,7 +15,6 @@ class HomePageView extends GetView<RootPageController> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           // coding the search bar
-
           Container(
             padding: EdgeInsets.only(top: 20),
             child: Row(

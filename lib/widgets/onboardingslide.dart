@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:plant_app/constants/constant_file.dart';
 
 class OnbardingSlide extends StatelessWidget {
-  String image;
-  String title;
-  String descreption;
+  final String image;
+  final String title;
+  final String descreption;
 
-  OnbardingSlide(
+  const OnbardingSlide(
       {super.key,
       required this.image,
       required this.title,

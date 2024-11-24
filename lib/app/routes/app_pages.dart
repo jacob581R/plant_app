@@ -10,6 +10,10 @@ import '../modules/onboarding/bindings/onboarding_binding.dart';
 import '../modules/onboarding/views/onboarding_view.dart';
 import '../modules/productdetail/bindings/productdetail_binding.dart';
 import '../modules/productdetail/views/productdetail_view.dart';
+import '../modules/resetpassword/bindings/resetpassword_binding.dart';
+import '../modules/resetpassword/views/resetpassword_view.dart';
+import '../modules/signup/bindings/signup_binding.dart';
+import '../modules/signup/views/signup_view.dart';
 
 part 'app_routes.dart';
 
@@ -50,6 +54,16 @@ class AppPages {
       name: _Paths.LOGIN,
       page: () => const LoginView(),
       binding: LoginBinding(),
+    ),
+    GetPage(
+      name: _Paths.SIGNUP,
+      page: () => const SignupView(),
+      binding: SignupBinding(),
+    ),
+    GetPage(
+      name: _Paths.RESETPASSWORD,
+      page: () => const ResetpasswordView(),
+      binding: ResetpasswordBinding(),
     ),
   ];
 }

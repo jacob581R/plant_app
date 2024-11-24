@@ -1,23 +1,16 @@
 import 'package:get/get.dart';
 
 class LoginController extends GetxController {
-  //TODO: Implement LoginController
 
-  final count = 0.obs;
-  @override
-  void onInit() {
-    super.onInit();
+
+
+  void signinclicked(){
+    Get.toNamed('/root-page');
   }
-
-  @override
-  void onReady() {
-    super.onReady();
+  void rigesterclicked(){
+    Get.toNamed('/signup');
   }
-
-  @override
-  void onClose() {
-    super.onClose();
+  void resetpassword(){
+    Get.toNamed('/resetpassword');
   }
-
-  void increment() => count.value++;
 }
