@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+<<<<<<< HEAD
 import 'package:get/get.dart';
 import 'package:plant_app/app/modules/RootPage/controllers/root_page_controller.dart';
 
@@ -107,6 +108,28 @@ class CartPageView extends GetView<RootPageController> {
             }
         ),
       )
+=======
+
+import 'package:get/get.dart';
+
+import '../controllers/cart_page_controller.dart';
+
+class CartPageView extends GetView<CartPageController> {
+  const CartPageView({super.key});
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('CartPageView'),
+        centerTitle: true,
+      ),
+      body: const Center(
+        child: Text(
+          'CartPageView is working',
+          style: TextStyle(fontSize: 20),
+        ),
+      ),
+>>>>>>> 335b8083f183c971ff06476ad8a2176c8448aaba
     );
   }
 }

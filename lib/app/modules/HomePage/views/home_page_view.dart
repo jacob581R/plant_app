@@ -1,18 +1,32 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+<<<<<<< HEAD
 import 'package:plant_app/app/modules/RootPage/controllers/root_page_controller.dart';
 import 'package:plant_app/constants/constant_file.dart';
 
 class HomePageView extends GetView<RootPageController> {
+=======
+import 'package:plant_app/constants/constant_file.dart';
+import '../controllers/home_page_controller.dart';
+
+class HomePageView extends GetView<HomePageController> {
+>>>>>>> 335b8083f183c971ff06476ad8a2176c8448aaba
   const HomePageView({super.key});
 
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
 
+<<<<<<< HEAD
     return Scaffold(body: SingleChildScrollView(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
+=======
+    return Scaffold(
+        body: SingleChildScrollView(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+>>>>>>> 335b8083f183c971ff06476ad8a2176c8448aaba
         children: [
           // coding the search bar
           Container(
@@ -56,6 +70,7 @@ class HomePageView extends GetView<RootPageController> {
               ],
             ),
           ),
+<<<<<<< HEAD
           // coding the tao catogrey
           GetBuilder(
               builder: (RootPageController controller) => (Container(
@@ -259,6 +274,21 @@ class HomePageView extends GetView<RootPageController> {
                 }
 
             ) ,
+=======
+          SizedBox(
+            height: 50,
+            width: size.width,
+            child: ListView.builder(
+              scrollDirection: Axis.horizontal,
+              itemCount: controller.plantTypes.length,
+              itemBuilder: (BuildContext context, int index) => (Padding(
+                padding: EdgeInsets.all(8.0),
+                child: GestureDetector(
+                  onTap: () {},
+                ),
+              )),
+            ),
+>>>>>>> 335b8083f183c971ff06476ad8a2176c8448aaba
           )
         ],
       ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+<<<<<<< HEAD
 import 'package:get/get.dart';
 import 'package:plant_app/app/modules/RootPage/controllers/root_page_controller.dart';
 
@@ -107,6 +108,28 @@ class FavouritePageView extends GetView<RootPageController> {
 
         ),
       )
+=======
+
+import 'package:get/get.dart';
+
+import '../controllers/favourite_page_controller.dart';
+
+class FavouritePageView extends GetView<FavouritePageController> {
+  const FavouritePageView({super.key});
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('FavouritePageView'),
+        centerTitle: true,
+      ),
+      body: const Center(
+        child: Text(
+          'FavouritePageView is working',
+          style: TextStyle(fontSize: 20),
+        ),
+      ),
+>>>>>>> 335b8083f183c971ff06476ad8a2176c8448aaba
     );
   }
 }

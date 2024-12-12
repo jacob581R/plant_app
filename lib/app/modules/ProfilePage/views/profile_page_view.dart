@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
+<<<<<<< HEAD
 import 'package:plant_app/app/modules/RootPage/controllers/root_page_controller.dart';
 import 'package:plant_app/constants/constant_file.dart';
 
@@ -141,6 +142,26 @@ class Profilewidget extends StatelessWidget {
         ],
       ),
 
+=======
+
+import '../controllers/profile_page_controller.dart';
+
+class ProfilePageView extends GetView<ProfilePageController> {
+  const ProfilePageView({super.key});
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('ProfilePageView'),
+        centerTitle: true,
+      ),
+      body: const Center(
+        child: Text(
+          'ProfilePageView is working',
+          style: TextStyle(fontSize: 20),
+        ),
+      ),
+>>>>>>> 335b8083f183c971ff06476ad8a2176c8448aaba
     );
   }
 }
